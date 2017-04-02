@@ -35,7 +35,7 @@ def getImage(url):
     
 def prettyPrint(word, i):
     tabs = ''.join(['\t' for s in xrange(3 - (len(word)+3)/8)])
-    print " - " + word + tabs + "[" + chr(i+48) + "]"
+    print(" - " + word + tabs + "[" + chr(i+48) + "]")
 
 def main(filename):
     # Different Input
@@ -71,7 +71,7 @@ def main(filename):
         else:
             header = "Turn " + str(turn)
             turn += 1
-        print header + " - " + deck.pop().name
+        print(header + " - " + deck.pop().name)
         inp = raw_input("")
 
 

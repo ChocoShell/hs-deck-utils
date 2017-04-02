@@ -23,7 +23,7 @@ class Card():
         try:
             data = response.json()[0]
         except KeyError:
-            print self.name
+            print(self.name)
         return (data['cardId'], data['img'])
 
 def get_deck(filename):
@@ -66,7 +66,7 @@ def mulligan(deck, hand, mull):
         try:
             hand[ord(letter) - 49] = deck.pop()
         except IndexError:
-            print "{} not in index".format(ord(letter) - 49)
+            print("{} not in index".format(ord(letter) - 49))
 
     deck.extend(mulled)
     return hand
